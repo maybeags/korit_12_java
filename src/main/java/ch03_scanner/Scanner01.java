@@ -30,6 +30,10 @@ public class Scanner01 {
             Scanner scanner = new Scanner(System.in);이 '객체 생성'을 했고
             scanner.nextLine();은 '메서드 호출'과 관련있는 개념이기 때문에 관련
             부분을 학습하시면 됩니다.
+
+            git add .
+            git commit -m "feat: 20251222 Java Lesson 시작"
+            git push
          */
     }
 }
