@@ -1,4 +1,7 @@
 package ch05_condition;
+
+import java.util.Scanner;
+
 /*
     과제 :
         윤년 계산기 작성
@@ -29,6 +32,49 @@ package ch05_condition;
  */
 public class Condition08Task3 {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("연도를 입력하세요 >>> ");
+        int year = scanner.nextInt();
 
+        // == 좌우가 같다 / != 좌우가 다르다
+        // 실수 사례 - 지시 사항대로 작성했을 경우
+        if ( year % 4 == 0 ) {
+            System.out.println("윤년입니다.");
+        } else if ( year % 100 == 0 ) {
+            System.out.println("윤년이 아닙니다.");
+        } else if ( year % 400 == 0 ) {
+            System.out.println("윤년입니다.");
+        } else {
+            System.out.println("윤년이 아닙니다.");
+        }
+
+        // 이상의 경우 100을 입력했을 때 41 번 라인이 true가 되기 때문에
+        // 윤년입니다가 출력됩니다.
+        System.out.println("수정 버전 # 1");
+        if ( year % 400 == 0 ) {
+            System.out.println("윤년입니다.");
+        } else if ( year % 100 == 0 ) {
+            System.out.println("윤년이 아닙니다.");
+        } else if ( year % 4 == 0 ) {
+            System.out.println("윤년입니다.");
+        } else {
+            System.out.println("윤년이 아닙니다.");
+        }
+
+        // 개발자가 조건을 어떻게 배치하는가에 따라 결과값이 다르게 나올 수 있는데,
+        // 여기서는 가장 널널한 조건부터 촘촘한 조건으로 배치했습니다.
+
+        String leapYear = "윤년입니다.";
+        System.out.println("수정 버전 # 2");
+        if ( year % 400 == 0 ) {
+
+        } else if ( year % 100 == 0 ) {
+            leapYear = "윤년이 아닙니다";
+        } else if ( year % 4 == 0 ) {
+
+        } else {
+            leapYear = "윤년이 아닙니다";
+        }
+        System.out.println(year + " 년은 " + leapYear);   // Condition09Task4
     }
 }
