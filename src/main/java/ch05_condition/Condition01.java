@@ -1,4 +1,4 @@
-package ch06_condition;
+package ch05_condition;
 
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Condition01 {
             System.out.println("num1은 양수입니다.");
         }
 
-        if (num1 < 15)
+        if (num1 > 15)
         {
             System.out.println("num1은 15 초과입니다.");
         }
@@ -40,11 +40,11 @@ public class Condition01 {
             System.out.println("num2은 양수입니다.");
         }
 
-        if (num2 < 15)
+        if (num2 > 15)
         {
             System.out.println("num2은 15 초과입니다.");
         }
-
+        // Condition02
 
     }
 }
