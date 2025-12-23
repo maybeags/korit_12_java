@@ -39,5 +39,7 @@ public class Condition12Switch2 {
                 System.out.println("불가능한 메뉴 선택입니다.");
         }
 
+        // ch06_loops - Loop01
+
     }
 }
