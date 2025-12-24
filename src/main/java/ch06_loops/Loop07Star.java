@@ -67,6 +67,6 @@ public class Loop07Star {
                 System.out.print("❤️");
             }
             System.out.println();
-        }
+        } // Loop08Star2
     }
 }
