@@ -1,4 +1,4 @@
-package ch05_condition;
+package ch06_loops;
 /*
     1부터 100까지 출력하시오.
     실행 예
