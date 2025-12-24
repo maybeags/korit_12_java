@@ -35,7 +35,6 @@ public class Method03ScoreCalc2 {
 
     public static void main(String[] args) {
         // method 호출 영역
-
         calcAvg();
     }
 }
