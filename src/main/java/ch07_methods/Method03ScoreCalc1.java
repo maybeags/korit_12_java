@@ -20,11 +20,6 @@ public class Method03ScoreCalc1 {
 
     public static void main(String[] args) {
         // 메서드 호출 영역
-
-        for (int i = 0 ; i < 100 ; i++ ) {
-            calcSumAndAvg();
-
-        }
-
+        calcSumAndAvg();
     }
 }
