@@ -2,7 +2,7 @@ package ch07_methods;
 
 import java.util.Scanner;
 
-public class Method03ScoreCalc2 {
+public class Method04ScoreCalc2 {
     // method 정의 영역 - 이전의 메서드03에서 정의한 방식은 하나의 메서드에 총합을 구하는 메서드와
     // 평균을 구하는 메서드가 합쳐져 있었습니다.
 
