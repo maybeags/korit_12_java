@@ -47,4 +47,45 @@ package ch08_classes.students;
 
  */
 public class Student {
+    // 필드 선언 영역
+    int studentCode;
+    String name;
+    double score;
+    // 생성자 정의 영역
+    // 기본 생성자
+    public Student() {
+        System.out.println("기본 생성자로 객체가 생성되었습니다.");
+    } // sout은 return하는게 아닙니다.
+    // 매개 변수 생성자 # 1
+    public Student(int studentCode) {
+        System.out.println("int 매개변수 생성자로 객체를 생성했습니다.");
+        this.studentCode = studentCode;
+    }
+    // 매개 변수 생성자 # 2
+    public Student(String name) {
+        System.out.println("String 매개변수 생성자로 객체를 생성했습니다.");
+        this.name = name;
+    }
+
+    public Student(int studentCode, String name) {
+        System.out.println("int, String 매개변수 생성자로 객체를 생성했습니다.");
+        this.studentCode = studentCode;
+        this.name = name;   // 매개 변수가 두 개이기 때문에 두 개의 field에 값이 대입되어야겠네요.
+    }
+
+    public Student(int studentCode, String name, double score) {
+        System.out.println("int, String, double 매개변수 생성자로 객체를 생성했습니다.");
+        this.studentCode = studentCode;
+        this.name = name;
+        this.score = score;
+    }
+
+    // 메서드 정의 영역
+    public void showInfo() {
+        System.out.println(name + " 학생의 정보입니다.");
+        System.out.println("학번 : " + studentCode);
+        System.out.println("이름 : " + name);
+        System.out.println("점수 : " + score);
+        System.out.println();
+    }
 }
