@@ -29,4 +29,34 @@ package ch09_getter_setter.univ_student;
     으로 출력될 수 있도록 showInfo() 메서드를 call1() 유형을로 작성하시오.
  */
 public class UnivStudent {
+    // field 선언
+    String name;
+    int grade;
+    double score;
+    // 생성자 정의
+    public UnivStudent() {}
+
+    public UnivStudent(String name) {
+        this.name = name;
+    }
+
+    public UnivStudent(int grade) {
+        this.grade = grade;
+    }
+
+    public UnivStudent(String name, int grade) {
+        this.name = name;
+        this.grade = grade;
+    }
+
+    public UnivStudent(String name, int grade, double score) {
+        this.name = name;
+        this.grade = grade;
+        this.score = score;
+    }
+    // setter 정의
+
+    // getter 정의
+
+    // method 정의
 }
