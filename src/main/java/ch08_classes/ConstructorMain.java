@@ -10,6 +10,8 @@ public class ConstructorMain {
         // 근데 잘 생각해보면 아니 만들면서 곧장 color는 빨강이라고 지정할 수 없는건가
         // 에 해당하는겁니다
         // Car myCar = new Car("빨강");
+        Constructor constructor3 = new Constructor(3);
+        System.out.println(constructor3.num);
 
     }
 }
