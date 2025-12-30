@@ -45,7 +45,8 @@ public class UnivStudent2 {
 
     public void setGrade(int grade) {
         if(grade < 0 || grade > 4) {
-            System.out.println("불가능한 입력입니다.");
+            System.out.println("불가능한 학년 입력입니다.");
+            System.out.println("입력된 값: " + grade);
             return;
         }
         this.grade = grade;

@@ -40,5 +40,7 @@ public class UnivStudentMain {
         System.out.println(student6.getName());     // 결과값 : 김육
         System.out.println(student6.getGrade());    // 결과값 : 1
         System.out.println(student6.getScore());    // 결과값 : 0.0
+
+
     }
 }
