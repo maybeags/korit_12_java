@@ -30,5 +30,7 @@ public class StudentMain {
         student3.showInfo();
         student4.showInfo();
         student5.showInfo();
+
+        Student2 student21 = new Student2(2026001, "김이십일", 1000);
     }
 }
