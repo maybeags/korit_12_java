@@ -42,6 +42,27 @@ public class Constructor {
         System.out.println("RequiredArgsConstructor(int 매개변수를 필수로 요구하는 생성자)");
         this.num = number;  // this : 해당 클래스에서 객체를 생성하게 되면 객체 이름으로 대체됨.
     }
+
+    public Constructor(String title) {
+        System.out.println("RequiredArgsConstructor(String 매개변수를 필수로 요구하는 생성자");
+        this.name = title;  // this.필드명 = 매개변수;
+    }
+
+    public Constructor(int num, String name) {
+        this.num = num;
+        this.name = name;
+        System.out.println("AllArgsConstructor(int, String 매개변수를 필수로 요구하는 생성자)");
+    }
+    // 이것도 뭐 AllArgsContructor긴한데 저는 이거까지 고려하는 분이랑
+    // 같이 일하기 싫습니다... Builder 패턴에서 비슷한거 학습할 예정
+    public Constructor(String name, int num) {
+        this.num = num;
+        this.name = name;
+    }
+
+    public void displayInfo() {
+        System.out.println(name + " 학생의 번호는 " + num + " 번 입니다.");
+    }
     /*
         지시 사항 # 1
         String title을 매개변수로 하는 생성자를 정의하고,
@@ -60,5 +81,13 @@ public class Constructor {
         sout(constructor5.num);
         sout(constructor5.name);
         을 출력하시오.
+
+        지시 사항 # 3
+        Car.java  파일 내에 있는 displayinfo() 메서드를 참조하여
+        constructor5.displayInfo();를 호출했을 경우
+        김오 학생의 학번은 5 번 입니다.
+        를 콘솔에 출력할 수 있도록 Constructor.java에 displayInfo() 메서드를 call1() 유형으로
+        작성하고
+        ConstructorMain에서 호출하시오.
      */
 }

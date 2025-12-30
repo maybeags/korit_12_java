@@ -13,5 +13,17 @@ public class ConstructorMain {
         Constructor constructor3 = new Constructor(3);
         System.out.println(constructor3.num);
 
+        // 지시사항 # 1 객체 생성
+        Constructor constructor4 = new Constructor("김사"); // 여기서 "김사"는 argument죠
+        // name은 field / title은 parameter / "김사"는 argument
+        // 근데 field를 name으로 잡았을 때, 매개변수를 name 으로 잡아버리면
+        // this.name = name; 형태로 작성될겁니다.
+        System.out.println(constructor4.name);
+
+        Constructor constructor5 = new Constructor(5, "김오");
+        System.out.println(constructor5.num);
+        System.out.println(constructor5.name);
+
+        constructor5.displayInfo();
     }
 }
