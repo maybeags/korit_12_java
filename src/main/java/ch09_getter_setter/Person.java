@@ -14,7 +14,13 @@ public class Person {
     }
     // setName, setAge, setAddress 작성하시오.
     public void setName(String name) {
+        if(name.length() > 4) {
+            System.out.println("변경할 수 없습니다.");
+            return; // method를 종료하는 명령어
+        }
+        System.out.println("변경 전 : " + this.name);
         this.name = name;
+        System.out.println("변경 후 : " + this.name);
     }
     public void setAge(int age) {
         if (age < 0 || age > 200) {
