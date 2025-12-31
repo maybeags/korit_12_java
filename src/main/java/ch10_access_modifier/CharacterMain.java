@@ -85,17 +85,27 @@ class Character {
         return exp;
     }
 
+    private void setExp(int exp) {
+        this.exp = exp;
+    }
+
     // 추가 method들 정의
     private void gainExp(int amount) {  // method에 private을 처음 적용해봄.
         exp += amount;
         System.out.println(name + "이(가) 경험치를 " + amount + " 얻었습니다.");
     }
 
+    // 그래서 두 가지 방식 중에 하나만 적용하시면 되겠습니다.
     public void attack() {
         System.out.println(name + "이(가) " + power + "의 힘으로 공격합니다.");
         this.gainExp(10);   // 그래서 공격 할 때 마다 10씩만 추가되겠네요.
         //  이상의 코드는 메서드 내에서 메서드를 호출한 사례인데 걔가 private이라는 게
         // 저희 기준으로는 처음 경험하는 부분입니다.
+
+        // 이하의 코드는 setter를 private으로 바꾼 다음에 공격할 때 마다 10씩 증가한 상태를 set하는 메서드 양식입니다.
+        int currentExp = this.getExp();
+        this.setExp(currentExp + 10);
+        System.out.println(name + "이(가) 경험치를 " + 10 + " 얻었습니다.");
     }
 
     public void heal() {
@@ -117,6 +127,7 @@ public class CharacterMain {
         // 여기에 10000000 같은 식으로 입력하면 부정 사용이 될 것 같긴 합니다.
         warrior.attack();
         warrior.heal();
+        System.out.println(warrior.getExp());
 
 //        warrior.gainExp(1000);   경험치를 얻는 메서드는 attack() 메서드를
         // 호출함을 통해서만 얻을 수 있도록 하기 위해서는
