@@ -65,4 +65,40 @@ package ch10_access_modifier.bank;
         현재 잔액 : 600000원                     (육십만원)
  */
 public class Bank {
+    private int accountNum;
+    private String accountHolder;
+    private int balance;
+    private int pinNumber;
+
+    /*
+        기본 생성자
+        계좌번호만 있는 생성자
+        계좌번호, 예금주를 받는 생성자
+        계좌번호, 예금주, 초기 잔액을 받는 생성자
+        계좌번호, 예금주, 초기 잔액, 비밀번호를 받는 생성자
+     */
+
+    public Bank() {}
+
+    public Bank(int accountNum) {
+        this.accountNum = accountNum;
+    }
+
+    public Bank(int accountNum, String accountHolder) {
+        this.accountNum = accountNum;
+        this.accountHolder = accountHolder;
+    }
+
+    public Bank(int accountNum, String accountHolder, int balance) {
+        this.accountNum = accountNum;
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+    }
+
+    public Bank(int accountNum, String accountHolder, int balance, int pinNumber) {
+        this.accountNum = accountNum;
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+        this.pinNumber = pinNumber; // 이 부분에 로직이 필요하겠네요.
+    }
 }
