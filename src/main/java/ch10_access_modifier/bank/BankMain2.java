@@ -30,5 +30,14 @@ public class BankMain2 {
 
         bank1.showAccountInfo();
         bank2.showAccountInfo();
+        bank1.deposit(50000, 1234);
+        bank1.withdraw(200000, 1234);
+        bank1.withdraw(100000, 1234);
+        System.out.println();
+        bank2.withdraw(100000, 1234);
+        bank2.deposit(200000, 1234);
+        System.out.println("\n최종 계좌 정보");
+        bank1.showAccountInfo();
+        bank2.showAccountInfo();
     }
 }

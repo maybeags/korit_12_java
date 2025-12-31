@@ -84,11 +84,42 @@ public class Bank2 {
 
     // 자동 완성 이외의 메서드들
     public void deposit(int amount, int inputPin) {
-
+        if(!checkPassword(inputPin)) return;
+        if(!checkBalance(amount)) return;
+        balance += amount;
+        System.out.println(amount + " 원이 입금되었습니다. 현재 잔액 : " + balance +"원");
     }
 
     public void withdraw(int amount, int inputPin) {
+        // 1. 비밀번호가 맞는 지 체크
+        if(!checkPassword(inputPin)) return;
+        // 2. 출금 금액이 0원 초과인지 체크
+        if(!checkBalance(amount)) return;
+        // 3. 계좌 잔액 - 출금 금액이 0원 이상인지 체크
+        if(balance - amount >= 0) {
+            balance -= amount;
+            System.out.println(amount + " 원이 출금되었습니다. 현재 잔액 : " + balance + "원");
+        } else {
+            System.out.println("잔액이 부족하여 출금할 수 없습니다.");
+        }
+    }
+    // 이하의 내부 메서드가 통과해야 그 다음 과정으로 넘어가기 때문에 -> private boolean
+    private boolean checkPassword(int inputPin) {
+        boolean result = true;          // 지역 변수 result 선언 및 초기화
+        if(inputPin != pinNumber) {     // 해당 조건식이 true라면 result를 false로 반전
+            System.out.println("비밀번호가 틀렸습니다."); // 시켜서 다음 과정으로 못가게.
+            result = !result;
+        }
+        return result;
+    }
 
+    private boolean checkBalance(int amount) {
+        boolean result = true;
+        if(amount <= 0) {
+            System.out.println("작업에 실패하였습니다.");
+            result = !result;
+        }
+        return result;
     }
 
     public void showAccountInfo() {
