@@ -40,8 +40,24 @@ public class Array07 {
         System.out.println("D 등급 인원 : " + d + "명");
         System.out.println("F 등급 인원 : " + f + "명");
 
-
         // 풀이법 # 2
         int[] grades = { 0, 0, 0, 0, 0 };
+
+        for ( int i = 0 ; i < scores.length ; i++ ) {
+            if (scores[i] < 0 || scores[i] > 100) break;
+            else {
+                if(scores[i] > 89) grades[0]++;
+                else if (scores[i] > 79) grades[1]++;
+                else if (scores[i] > 69) grades[2]++;
+                else if (scores[i] > 59) grades[3]++;
+                else grades[4]++;       // [i]가 아니라 [0]으로 하드코딩해야합니다.
+            }
+        }
+        System.out.println();
+        System.out.println("A 등급 인원 : " + grades[0] + "명");
+        System.out.println("B 등급 인원 : " + grades[1] + "명");
+        System.out.println("C 등급 인원 : " + grades[2] + "명");
+        System.out.println("D 등급 인원 : " + grades[3] + "명");
+        System.out.println("F 등급 인원 : " + grades[4] + "명");
     }
 }
