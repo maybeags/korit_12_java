@@ -13,6 +13,13 @@ package ch11_arrays;
 
     각 element를 뽑아서 10씩 곱합니다.
     향상된 for문으로 element를 출력합니다 -> 1239087 / 13409578 / -584976395 / ...
+
+    git add .
+    git commit -m "feat: 20260105 Array"
+    git push
+
+    자격 증명 삭제
+    자리 정리
  */
 public class Array11 {
     public static void main(String[] args) {
