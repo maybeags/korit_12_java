@@ -31,5 +31,16 @@ public class Main {
         System.out.println(tiger1.getAnimalName() + "의 몸무게는 " + tiger1.getWeight() + "t입니다.");
 
         System.out.println("-------------------------------------");
+        Human human1 = new Human();
+        human1.move();
+        human1.setAnimalName("김일");
+        human1.setAnimalAge(20);
+        System.out.println("안녕하세요 제 이름은 " +
+                human1.getAnimalName() + "이고 나이는 "
+        + human1.getAnimalAge() + "살입니다.\n내년에는 " +
+                (human1.getAnimalAge() + 1) + "살이 됩니다.");
+        human1.read("자바의 기초");
+
+
     }
 }

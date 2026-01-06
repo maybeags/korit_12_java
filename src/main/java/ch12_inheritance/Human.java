@@ -26,5 +26,34 @@ package ch12_inheritance;
     여러분이름이 자바의 기초를 읽는 중입니다.
 
  */
-public class Human {
+public class Human extends Animal{
+    // 사람 객체가 생성되었습니다. 를 출력하려면 생성자를 '재정의'해야겠네요.
+    public Human() {
+        System.out.println("사람 객체가 생성되었습니다.");
+    }
+    // 사람이 두 발로 걷습니다. 를 처리하려면
+    // method override가 필요하겠네요.
+    @Override
+    public void move() {
+        System.out.println("사람이 두 발로 걷습니다.");
+    }
+    // 여러분이름이 자바의 기초를 읽는 중입니다. 는
+    // Human 클래스의 고유 메서드이기 때문에
+    public void read(String title) {
+        System.out.println(getAnimalName() + "이 "
+                + title + "를 읽는 중입니다.");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
