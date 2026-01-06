@@ -36,8 +36,10 @@ public class Array17 {
                 else i--;
                 cnt++;
             }
+            Arrays.sort(lottoNums);
             System.out.println(Arrays.toString(lottoNums));
             System.out.println("반복 횟수 확인용 : " + cnt);
         }
     }
+    // ch12_inheritance / Animal / Human / Tiger / Main - main
 }
