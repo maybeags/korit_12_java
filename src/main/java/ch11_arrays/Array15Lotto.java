@@ -18,6 +18,14 @@ package ch11_arrays;
  */
 public class Array15Lotto {
     public static void main(String[] args) {
+        // 일단 1 ~ 45 까지의 임의의 값을 집어넣기 위해 두 가지 방법을 사용할 수 있습니다.
+        // # 1 - random.nextInt(45) + 1을 사용하는 방법 : 이미 수업한 방식입니다.
+        // # 2 - Math.random() : 0 ~ 0.999999 사이의 임의의 실수를 return함
+        System.out.println(Math.random());  // 0 ~ 9 까지의 값을 return하려면
+        System.out.println(Math.random()*10 + 1);
+        // 그럼 Math.random()을 사용했을 때 1 ~ 45를 return하려면
+        System.out.println(Math.random()*45 + 1);
+
 
     }
 }
