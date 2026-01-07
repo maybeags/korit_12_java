@@ -7,6 +7,15 @@ public abstract class Person {
     public Person(String name) {
         this.name = name;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     // method 예시
     public abstract void introduce();
 }
