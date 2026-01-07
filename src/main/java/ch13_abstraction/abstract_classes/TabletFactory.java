@@ -21,5 +21,18 @@ package ch13_abstraction.abstract_classes;
         factory2 메서드의 name은 삼성 컴퓨터 공장으로 set하시오.
         factory2.showInfo()를 호출할 것
  */
-public class TabletFactory {
+public class TabletFactory extends Factory{
+    @Override
+    public void produce(String model) {
+        System.out.println("태블릿 공장 : " + this.getName() + "에서 [ " + model + " ]을 생산합니다.");
+    }
+
+    @Override
+    public void manage() {
+        System.out.println("태블릿 공장을 관리합니다.");
+    }
+
+    public void upgrade(String model) {
+        System.out.println(model + "로 업그레이드합니다.");
+    }
 }
