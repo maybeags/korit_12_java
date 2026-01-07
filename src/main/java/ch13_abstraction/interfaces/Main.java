@@ -61,6 +61,12 @@ public class Main {
                     볼륨을 한 칸 올립니다.
                     볼륨을 계속 올립니다.
                     전원을 끕니다.
+                    깃허브 올리기 용 수정
+                    git add .
+                    git commit -m "feat: 20260107 inheritance / abstraction / interface"
+                    git push
+                    자격 증명 삭제
+                    자리 정리 - 물티슈 부탁드리겠습니다.
          */
     }
 }
