@@ -16,7 +16,9 @@ public class Main {
         TvRemoteController tvRemoteController = new TvRemoteController(
                 new PowerButton(),
                 new ChannelDownButton(),
-                new ChannelUpButton()
+                new ChannelUpButton(),
+                new VolumeDownButton(),
+                new VolumeUpButton()
         );
         /*
             리모컨 객체의 argument로 PowerButton 생성자를 집어넣었습니다.
@@ -40,7 +42,14 @@ public class Main {
         tvRemoteController.onPressedChannelUpButton();
         System.out.println(tvRemoteController.onUpChannelUpButton1());
         tvRemoteController.onUpChannelUpButton2();
+        tvRemoteController.onPressedVolumeDownButton();
+        tvRemoteController.onDownVolumeDownButton();
+        tvRemoteController.onPressedVolumeUpButton();
+        System.out.println(tvRemoteController.onUpVolumeUpButton1());
+        tvRemoteController.onUpVolumeUpButton2();
+
         tvRemoteController.onPressedPowerButton();
+
         /*
             VolumeDownButton 클래스를 정의하시오.
             VolumeUpButton 클래스를 정의하시오.
