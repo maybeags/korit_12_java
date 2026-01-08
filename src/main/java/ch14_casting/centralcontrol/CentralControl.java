@@ -164,6 +164,12 @@ public class CentralControl {
             } else if (device instanceof Mouse) {
                 Mouse mouse = (Mouse) device;
                 mouse.leftClick();
+            } else if (device instanceof Printer) {
+                Printer printer = (Printer) device;
+                printer.print();
+            } else if (device instanceof Speaker) {
+                Speaker speaker = (Speaker) device;
+                speaker.changeEqual();
             } else if (device == null) {
                 System.out.println("연결되지 있지 않습니다.");
             } else {
