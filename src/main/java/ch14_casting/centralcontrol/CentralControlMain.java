@@ -55,6 +55,11 @@ public class CentralControlMain {
             저희는 method를 경유하여 deviceArray 배열 내에 있는 특정 index의 객체를 삭제할 수도 있을 것 같습니다.
 
             deleteDevice()를 2 개 정의하시오.
+            .equals() 메서드에 대해서 확인해볼 필요가 있습니다.
+
+            git add .
+            git commit -m "feat: 20260108 interface / casting"
+            git push
          */
         centralControl1.showInfo();
 
