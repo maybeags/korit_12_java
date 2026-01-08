@@ -77,5 +77,22 @@ public class Main {
                     자격 증명 삭제
                     자리 정리 - 물티슈 부탁드리겠습니다.
          */
+
+        System.out.println("-----에어컨 파트-----");
+        AirConditionerController airConditionerController = new AirConditionerController(
+          new PowerButton(),
+          new ModeChangeButton(),
+          new TemperatureDownButton(),
+          new TemperatureUpButton()
+        );
+
+        airConditionerController.onPressedPowerButton();
+        airConditionerController.onPressedTemperatureDownButton();
+        airConditionerController.onDownTemperatureDownButton();
+        airConditionerController.changeMode();
+        airConditionerController.onPressedTemperatureUpButton();
+        airConditionerController.onUpTemperatureUpButton();
+        airConditionerController.changeMode();
+        airConditionerController.onPressedPowerButton();
     }
 }

@@ -22,4 +22,40 @@ package ch13_abstraction.interfaces;
     전원을 끕니다.
  */
 public class AirConditionerController {
+    private PowerButton powerButton;
+    private ModeChangeButton modeChangeButton;
+    private TemperatureDownButton temperatureDownButton;
+    private TemperatureUpButton temperatureUpButton;
+
+    public AirConditionerController(PowerButton powerButton, ModeChangeButton modeChangeButton, TemperatureDownButton temperatureDownButton, TemperatureUpButton temperatureUpButton) {
+        this.powerButton = powerButton;
+        this.modeChangeButton = modeChangeButton;
+        this.temperatureDownButton = temperatureDownButton;
+        this.temperatureUpButton = temperatureUpButton;
+        System.out.println("에어컨 리모컨 객체가 생성되었습니다.");
+    }
+
+    public void onPressedPowerButton() {
+        powerButton.onPressed();
+    }
+
+    public void changeMode() {
+        modeChangeButton.onPressed();
+    }
+
+    public void onPressedTemperatureDownButton() {
+        temperatureDownButton.onPressed();
+    }
+
+    public void onDownTemperatureDownButton() {
+        temperatureDownButton.onDown();
+    }
+
+    public void onPressedTemperatureUpButton() {
+        temperatureUpButton.onPressed();
+    }
+
+    public void onUpTemperatureUpButton() {
+        System.out.println(temperatureUpButton.onUp());
+    }
 }
