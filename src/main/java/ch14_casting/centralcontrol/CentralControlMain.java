@@ -7,7 +7,7 @@ public class CentralControlMain {
         Mouse mouse1 = new Mouse();
         LED led1 = new LED();
         // 이하의 코드는 비어있는 배열을 CentralControl 클래스의 field인 deviceArray에 집어넣었네요.
-        CentralControl centralControl1 = new CentralControl(new Power[5]);
+        CentralControl centralControl1 = new CentralControl(new Power[10]);
         // 이하의 코드는 powers 배열을 만든 다음에 내부에 Power의 하위 클래스들의 객체를 집어넣었습니다.
         Power[] powers = {new AirConditioner(), new Computer(), new Mouse(), new LED()}; // 여기서 이루어졌습니다.
 
@@ -30,5 +30,12 @@ public class CentralControlMain {
         centralControl1.addDevice(led1);
 
         centralControl1.powerOn();
+        centralControl1.powerOff();
+
+        centralControl1.showInfo();
+
+        centralControl1.performSpecificMethod();
+
+        System.out.println("------------------- Printer / Speaker 추가 이후 --------------------");
     }
 }

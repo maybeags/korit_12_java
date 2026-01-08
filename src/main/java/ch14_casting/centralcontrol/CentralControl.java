@@ -81,6 +81,23 @@ public class CentralControl {
             반복문 돌면서 deviceArray[i].on(); 이거 실행시켜주면 전부 다 켜지겠네요.
          */
         for ( int i = 0 ; i  < deviceArray.length ; i++ ) {
+            if (deviceArray[i] == null) {
+                System.out.println("장치가 없어 실행하지 못했습니다.");
+                continue;       // return; 으로 마무리 했을 때와의 콘솔 상에서의 차이점을 확인하면 더 명확해집니다.
+                /*
+                    break;는 반복문을 즉시 종료하는 명령어고
+                    return;은 method를 즉시 종료하는 명령어.
+                    continue;는 현재 반복'만' 종료하고 다음 반복으로 넘어감.
+                    즉, deviceArray[6] 이 null이라면 다음 반복으로 i++시켜서
+                    deviceArray[7]을 검사하고 deviceArray.length 미만까지
+                    전체 다 확인을 하는 형태라고 할 수 있습니다.
+
+                    그러면 6번지는 비어있고 7번지에 Power 의 서브 클래스의
+                    인스턴스가 존재하는 상황에서 6번지는 실행 안되고
+                    7번지는 실행되겠네요.
+
+                 */
+            }
             deviceArray[i].on();
         }
         // 근데 아까 말한 것처럼 비어있는 index가 있다면 오류 발생합니다.
@@ -90,6 +107,81 @@ public class CentralControl {
             3에서 오류 발생하기 때문에
             4번 인덱스에서 on() 메서드를 아예 호출하지 못합니다.
          */
+
+        /*
+            powerOff() 메서드를 정의하고, Main에서 호출하시오.
+            단 배열 내부를 탐색할 때 향상된 for문으로 작성하시오.
+            장치가 없어 전원을 끌 수 없습니다.
+         */
+    }
+
+    public void powerOff() {
+        for (Power device : deviceArray) {
+            if(device == null) {
+                System.out.println("장치가 없어서 전원을 끌 수 없습니다.");
+                continue;
+            }
+            device.off();
+        }
+    }
+    /*
+        현재 배열 내에 각 객체들이 들어가있습니다.
+        객체명.getClass().getSimpleName()을 활용하면 클래스 네임만 출력된다는 것을 확인할 수 있는데,
+        deviceArray를 반복 돌려서 몇 번 (인덱스+1)에 어떤 클래스의 객체가 있는지 표시하는
+        showInfo 메서드를 정의하시오.
+        실행 예
+        슬롯 [ 1 ] 번 : Computer
+        슬롯 [ 2 ] 번 : LED
+        ...
+        슬롯 [ 10 ] 번 : Empty
+     */
+    public void showInfo() {
+        int i = 0;
+        for ( Power device : deviceArray ) {
+            if(device == null) {
+                System.out.println("슬롯 [ " + ++i + " ] 번 : Empty" );
+                continue;
+            }
+            System.out.println("슬롯 [ " + ++i + " ] 번 :" + device.getClass().getSimpleName());
+        }
+    }
+// 이상과 같이 작성하신 분들은 일반 for문을 작성한 showInfo2()를 정의해보시면 되겠습니다.
+
+    // downcasting 관련 - 즉 Power[]의 내부 element의 고유 메서드 호출
+    public void performSpecificMethod() {
+        for ( Power device : deviceArray ) {
+            if(device instanceof AirConditioner) {
+                AirConditioner airConditioner = (AirConditioner) device;
+                airConditioner.changeMode();
+            } else if (device instanceof Computer) {
+                // 컴퓨터로 다운 캐스팅 명시적으로 해줘야 하고.
+                Computer computer = (Computer) device;
+                // 컴퓨터의 고유 메서드를 실행하면 되겠네요.
+                computer.compute();
+            } else if (device instanceof LED) {
+                LED led = (LED) device;
+                led.changeColor();
+            } else if (device instanceof Mouse) {
+                Mouse mouse = (Mouse) device;
+                mouse.leftClick();
+            } else if (device == null) {
+                System.out.println("연결되지 있지 않습니다.");
+            } else {
+                System.out.println("아직 지원되지 않는 전자기기입니다.");
+            }
+        }
     }
 }
+
+/*
+   Printer 클래스와 Speaker 클래스를 생성하고 Power를 implement하시오.
+   Printer의 고유 메서드는 print() - 프린터가 인쇄를 합니다.
+   Speaker의 고유 메서드는 changeEqual() - 스피커의 이퀄라이저를 변경합니다.
+
+   Main에서 Printer / Speaker 인스턴스를 deviceArray에 추가하고
+   .powerOn()
+   .powerOff()
+   .showInfo()
+   .performSpecificMethod()를 호출하시오.
+ */
 
