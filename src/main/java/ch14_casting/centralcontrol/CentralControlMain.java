@@ -60,8 +60,16 @@ public class CentralControlMain {
             git add .
             git commit -m "feat: 20260108 interface / casting"
             git push
+
+            자격증명 삭제
+            자리 정리
          */
         centralControl1.showInfo();
-
+        centralControl1.deleteDevice(1);
+        centralControl1.showInfo();
+        String device = "LED";
+        System.out.println("---LED---");
+        centralControl1.deleteDevice(device);
+        centralControl1.showInfo();
     }
 }

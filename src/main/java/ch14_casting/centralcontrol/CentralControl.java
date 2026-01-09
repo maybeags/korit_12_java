@@ -177,6 +177,22 @@ public class CentralControl {
             }
         }
     }
+    public void deleteDevice(int slot) {
+        int i = slot-1;
+        System.out.println(deviceArray[i].getClass().getSimpleName() + "을(를) 삭제했습니다.");
+        deviceArray[i] = null;
+    }
+
+    public void deleteDevice(String deviceName) {
+        for ( int i = 0 ; i < deviceArray.length ; i++ ) {
+            if (deviceArray[i] == null) continue;
+            else if(deviceName.equals(deviceArray[i].getClass().getSimpleName())) {
+                System.out.println(deviceArray[i].getClass().getSimpleName() + "을(를) 삭제했습니다.");
+                deviceArray[i] = null;
+                return;
+            }
+        }
+    }
 }
 
 /*
