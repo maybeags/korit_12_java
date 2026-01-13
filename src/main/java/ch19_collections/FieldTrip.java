@@ -1,4 +1,7 @@
 package ch19_collections;
+
+import java.util.*;
+
 /*
            1. 학생의 수를 입력 받아 해당 횟수만큼 반복문을 돌릴 것.
            2. 1번 ~ 5번 학생의 응답을 fieldTrips List에 저장할 것
@@ -24,4 +27,33 @@ package ch19_collections;
            입니다.
         */
 public class FieldTrip {
+    public static void main(String[] args) {
+        // 필요한 객체 생성
+        Scanner scanner = new Scanner(System.in);
+        List<String> fieldTrips = new ArrayList<>();
+        Set<String> fieldTripSet = new HashSet<>();
+        // 필요 변수
+        int num = 0;
+        System.out.print("몇 명의 학생이 수학 여행지를 입력하시겠습니까? >>> ");
+        num = scanner.nextInt();
+        scanner.nextLine();
+        for ( int i = 0 ; i < num ; i++ ) {
+            System.out.print((i+1) + " 번 째 학생의 수학 여행지를 입력하세요 >>> ");
+            String fieldTrip = scanner.nextLine();  // 여기가 focus가 되어야겠네요
+            fieldTrips.add(fieldTrip);
+        }
+        System.out.println();
+        // 최초 list에서의 element 추출
+        for ( int i = 0 ; i < num ; i++ ) {
+            System.out.println((i+1) + " 번 학생의 후보지 : " + fieldTrips.get(i));
+        }
+        // 중복 제거 관련
+        fieldTripSet.addAll(fieldTrips);
+        System.out.println();
+        System.out.println("수학 여행 후보지는");
+        for ( String elem : fieldTripSet ) {
+            System.out.println(elem);
+        }
+        System.out.println("입니다.");
+    }
 }
