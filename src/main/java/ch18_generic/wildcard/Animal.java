@@ -6,26 +6,7 @@ package ch18_generic.wildcard;
      자리 정리
      자격 증명 삭제
      출결 통제 후 퇴실 체크
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  */
-public class Animal {
+public abstract class Animal {
+    public abstract void move();
 }
