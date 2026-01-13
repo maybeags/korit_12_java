@@ -66,3 +66,11 @@ public class Meeting {
         System.out.println(b);
     }
 }
+/*
+    git add .
+    git commit -m "feat: 20260113 Collections / wildcard"
+    git push
+
+    자격 증명 삭제
+    자리 정리
+ */
