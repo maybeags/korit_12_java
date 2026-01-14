@@ -23,7 +23,7 @@ public class BookMap3 {
                         System.out.println("이미 재고에 있는 도서입니다.");
                     } else {
                         System.out.print("재고 수량을 입력하세요 >>> ");
-                        int stock = scanner.nextInt();
+                        int stock = scanner.nextInt();  // 칠
                         scanner.nextLine();
                         bookInventory.put(bookTitle, stock);
                         System.out.println(bookTitle + " 도서가 " + stock + " 권 추가되었습니다.");
