@@ -1,4 +1,7 @@
 package ch19_collections.testitem;
+
+import java.util.Scanner;
+
 /*
     서점에서 판매하는 책 재고를 관리하는 프로그램
     지시 사항
@@ -49,4 +52,7 @@ package ch19_collections.testitem;
     프로그램을 종료합니다.
  */
 public class BookMap {
+    public static void main(String[] args) {
+
+    }
 }
