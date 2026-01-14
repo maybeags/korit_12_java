@@ -11,6 +11,12 @@ class LoginFailedException extends Exception {
         this.message = message;
     }
     인 상태라고 봐야겠네요. 그걸 42 번 라인에서 getter(getMessage())를 통해서 출력했기 때문에 콘솔상의 순서가 다르게 보입니다.
+    git add .
+    git commit -m "feat: 20260114 Collections / JSON / Exception"
+    git push
+    자격 증명 삭제
+    설문조사
+    자리 정리
  */
 
 
